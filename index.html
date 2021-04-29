@@ -1,0 +1,38 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <body>
+       
+    <script>
+    function passByReference(func) {
+        var temp;
+        temp = func.x;
+        func.x = func.y;
+        func.y = temp;
+        document.write("<mark><font color=\"purple\"><b>Inside pass By Reference function: <b></mark>");
+        document.write("<br>");
+        document.write("x="+func.x);
+        document.write("<br>");
+        document.write("y="+func.y);
+    }
+    var func = {
+        x : 3, 
+        y : 5
+    }
+    document.write("<mark><b><font color=\"black\">Before calling pass By Reference function: </b></mark> ");
+    document.write("<br>");
+    document.write("x="+func.x);
+    document.write("<br>");
+    document.write("y="+func.y);
+     document.write("<br>");
+    passByReference(func);
+    document.write("<br>");
+    document.write("<mark><b><font color=\"blue\">After calling pass By Reference function: </b></mark> ");
+    document.write("<br>");
+    document.write("x="+func.x);
+        document.write("<br>");
+        document.write("y="+func.y);
+    </script>
+    </body>
+    </html>
